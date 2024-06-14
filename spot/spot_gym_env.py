@@ -19,13 +19,13 @@ import pybullet_data
 from gym import spaces
 from gym.utils import seeding
 from pkg_resources import parse_version
-from spotmicro import spot
+from spot import spot
 import pybullet_utils.bullet_client as bullet_client
 from gym.envs.registration import register
-from spotmicro.heightfield import HeightField
-from spotmicro.OpenLoopSM.SpotOL import BezierStepper
-import spotmicro.Kinematics.LieAlgebra as LA
-from spotmicro.spot_env_randomizer import SpotEnvRandomizer
+from spot.heightfield import HeightField
+from spot.OpenLoopSM.OpenLoop import BezierStepper
+import spot.kinematics.LieAlgebra as LA
+from spot.env_randomizer import SpotEnvRandomizer
 
 NUM_SUBSTEPS = 5
 NUM_MOTORS = 12
