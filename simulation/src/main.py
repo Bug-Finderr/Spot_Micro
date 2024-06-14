@@ -9,7 +9,7 @@ import argparse
 sys.path.append('../../')
 
 from spot.gym_envs.Bezier_env import spotBezierEnv
-from spot.util.gui import GUI
+from spot.util.gui import gui
 from spot.kinematics.SpotKinematics import SpotModel
 from spot.kinematics.LieAlgebra import RPY
 from spot.gait_generators.Bezier import BezierGait
@@ -92,7 +92,7 @@ def main():
     state = env.reset()
 
     # Initialize GUI
-    g_u_i = GUI(env.spot.quadruped)
+    g_u_i = gui(env.spot.quadruped)
 
     # Initialize SpotModel and Bezier Gait
     spot = SpotModel()
