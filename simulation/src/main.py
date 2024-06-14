@@ -1,8 +1,6 @@
 import numpy as np
-import matplotlib.pyplot as plt
 import copy
 import sys
-import time
 import os
 import argparse
 
@@ -11,7 +9,6 @@ sys.path.append('../../')
 from spot.gym_envs.Bezier_env import spotBezierEnv
 from spot.util.gui import gui
 from spot.kinematics.SpotKinematics import SpotModel
-from spot.kinematics.LieAlgebra import RPY
 from spot.gait_generators.Bezier import BezierGait
 from spot.env_randomizer import SpotEnvRandomizer
 from spot.OpenLoopSM.OpenLoop import BezierStepper  # Testing
