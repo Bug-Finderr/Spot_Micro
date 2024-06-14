@@ -11,7 +11,6 @@ Example: heightfield.py
 https://github.com/bulletphysics/bullet3/blob/master/examples/pybullet/examples/heightfield.py
 """
 
-import pybullet as p
 import pybullet_data as pd
 import random
 

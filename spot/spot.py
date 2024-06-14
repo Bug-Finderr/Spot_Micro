@@ -20,7 +20,7 @@ from . import motor
 from spot.util import pybullet_data
 print(pybullet_data.getDataPath())
 from spot.kinematics.SpotKinematics import SpotModel
-import spot.kinematics.LieAlgebra as LA
+# import spot.kinematics.LieAlgebra as LA
 
 INIT_POSITION = [0, 0, 0.25]
 INIT_RACK_POSITION = [0, 0, 1]
