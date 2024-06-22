@@ -1,6 +1,6 @@
 import numpy as np
 from spot.kinematics.LegKinematics import LegIK
-from spot.kinematics.LieAlgebra import RpToTrans, TransToRp, TransInv, RPY, TransformVector
+from spot.kinematics.LieAlgebra import RpToTrans, TransToRp, TransInv, RPY
 from collections import OrderedDict
 
 class SpotModel:

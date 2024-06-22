@@ -3,7 +3,7 @@ from __future__ import absolute_import
 from __future__ import division
 import functools
 import inspect
-import pybullet
+import pybullet as p
 
 
 class BulletClient(object):
@@ -23,23 +23,23 @@ class BulletClient(object):
         self._shapes = {}
 
         if connection_mode is None:
-            self._client = pybullet.connect(pybullet.SHARED_MEMORY)
+            self._client = p.connect(p.SHARED_MEMORY)
             if self._client >= 0:
                 return
             else:
-                connection_mode = pybullet.DIRECT
-        self._client = pybullet.connect(connection_mode)
+                connection_mode = p.DIRECT
+        self._client = p.connect(connection_mode)
 
     def __del__(self):
         """Clean up connection if not already done."""
         try:
-            pybullet.disconnect(physicsClientId=self._client)
-        except pybullet.error:
+            p.disconnect(physicsClientId=self._client)
+        except p.error:
             pass
 
     def __getattr__(self, name):
         """Inject the client id into Bullet functions."""
-        attribute = getattr(pybullet, name)
+        attribute = getattr(p, name)
         if inspect.isbuiltin(attribute):
             if name not in [
                 "invertTransform",

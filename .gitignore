@@ -1,3 +1,12 @@
 venv
+env
 .vscode
 .idea
+
+spot/__pycache__/
+spot/gait_generators/__pycache__/
+spot/gym_envs/__pycache__/
+spot/kinematics/__pycache__/
+spot/OpenLoopSM/__pycache__/
+spot/util/__pycache__/
+spot/util/pybullet_data/__pycache__/
