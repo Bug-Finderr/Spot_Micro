@@ -1,9 +1,6 @@
 import numpy as np
-import matplotlib.pyplot as plt
 import copy
 import sys
-import time
-import os
 import argparse
 
 sys.path.append('../../')
@@ -11,7 +8,6 @@ sys.path.append('../../')
 from spot.gym_envs.Bezier_env import spotBezierEnv
 from spot.util.gui import gui
 from spot.kinematics.SpotKinematics import SpotModel
-from spot.kinematics.LieAlgebra import RPY
 from spot.gait_generators.Bezier import BezierGait
 from spot.env_randomizer import SpotEnvRandomizer
 from spot.OpenLoopSM.OpenLoop import BezierStepper  # Testing
@@ -51,18 +47,6 @@ def main():
     print("STARTING SPOT TEST ENV")
     seed = 0
     max_timesteps = 4e6
-
-    # Find absolute path to this file
-    my_path = os.path.abspath(os.path.dirname(__file__))
-    results_path = os.path.join(my_path, "../results")
-    models_path = os.path.join(my_path, "../models")
-
-    # Create results and models directories if they don't exist
-    if not os.path.exists(results_path):
-        os.makedirs(results_path)
-
-    if not os.path.exists(models_path):
-        os.makedirs(models_path)
 
     # Set configuration based on parsed arguments
     on_rack = ARGS.DebugRack
